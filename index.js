@@ -5,6 +5,8 @@
 // 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
+const { starships } = require("./data/fixtures-bundle")
+
 /**
  * ### Challenge `getName`
  * Example ✅
@@ -29,6 +31,7 @@ function getName(character) {
  * Sample data expected output: 5
  */
 function getFilmCount(character) {
+  return character.films.length
   // TODO: Add your code inside the functions (others below).
 
 }
@@ -42,8 +45,10 @@ function getFilmCount(character) {
  * If length is 0. Return 'none'
 */
 function getSecondStarshipName(character) {
+  return character.starships[1].name; 
   // TODO: Add your code here.
 }
+
 
 /**
  * ### Challenge `getSummary`
@@ -55,9 +60,10 @@ function getSecondStarshipName(character) {
  *    Result: `Luke Skywalker, 172cm, 77kg. Featured in 5 films.`
  */
 function getSummary(character) {
-  // TODO: Add your code here.
-}
+  return `${character.name}, ${character.height}cm, ${character.mass}kg. Featured in ${character.films.length} films.`
 
+
+}
 /**
  * ### Challenge `getVehiclesCostInCreditsSumTotal`
  * MVP Challenge 🤓
@@ -66,9 +72,12 @@ function getSummary(character) {
  * Sum the total cost in credits for all vehicles defined on the input character.
  * Sample data expected output: 8000
 */
+
 function getVehiclesCostInCreditsSumTotal(character) {
-  // TODO: Add your code here.
+  return character.cost_in_credits
+
 }
+  // TODO: Add your code here.
 
 /**
  * ### Challenge `getStarshipPassengerAndCrewSumTotal`
@@ -81,6 +90,7 @@ function getVehiclesCostInCreditsSumTotal(character) {
  * Sample data expected output: 27
 */
 function getStarshipPassengerAndCrewSumTotal(character) {
+  return sum 
   // TODO: Add your code here.
 }
 
@@ -98,8 +108,22 @@ function getStarshipPassengerAndCrewSumTotal(character) {
  * Given film #7, expected error: `There are only 3 Star Wars movies. Flan fiction excluded.`
 */
 function getNthFilm(character, filmNumber) {
+  return `${character.starships[filmNumber].films}`; 
+
   // TODO: Add your code here.
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * ### Challenge `getCargoCapacityTotal`
